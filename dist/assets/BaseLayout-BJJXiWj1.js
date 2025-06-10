@@ -1,0 +1,1 @@
+import{j as a}from"./index-CtWWTnuC.js";import{H as t,M as n,c as i}from"./MainNavigation-BWo1066i.js";const r="_layout_vuij6_1",e="_container_vuij6_7",s={layout:r,container:e},u=({children:o})=>a.jsxs("div",{className:s.layout,children:[a.jsx(t,{children:a.jsx(n,{})}),a.jsx("div",{className:s.container,children:o}),a.jsx(i,{})]});export{u as B};
