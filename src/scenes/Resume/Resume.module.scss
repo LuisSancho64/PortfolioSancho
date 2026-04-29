@@ -2,7 +2,6 @@
   padding: 12rem 12rem 3rem;
 }
 
-/* 🔥 layout controlado */
 .header {
   display: flex;
   justify-content: space-between;
@@ -17,11 +16,11 @@
   font-weight: 200;
 }
 
-/* 🔥 mejor control imagen */
+/* imagen SVG */
 .filesImg {
-  width: 35%;
-  min-width: 120px;
-  max-width: 280px;
+  width: 30%;
+  max-width: 260px;
+  min-width: 140px;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -30,34 +29,65 @@
     width: 100%;
     height: auto;
   }
-
-  .hero-svg2 {
-    fill: #8a4ca8;
-  }
 }
 
-/* 🔥 botón consistente */
+/* 🔥🔥🔥 BOTÓN ESTILO ORIGINAL - Como en la imagen 🔥🔥🔥 */
 .downloadBtn {
-  width: 15rem;
-  display: flex;
+  background: transparent !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 12px !important;
+  color: #ffffff !important;
+  padding: 14px 24px !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
 }
 
-/* textos */
+/* Icono dentro del botón */
+.downloadIcon {
+  width: 18px;
+  height: 18px;
+  fill: #ffffff !important;
+}
+
+/* Todos los textos blancos */
+.downloadBtn * {
+  color: #ffffff !important;
+}
+
+/* Texto principal */
 .downloadText {
-  margin-left: 8px;
-  text-transform: uppercase;
+  font-weight: 600;
 }
 
+/* Extensión .PDF - estilo destacado como en la imagen */
 .filename {
-  padding-top: 3px;
-  text-transform: uppercase;
-  font-size: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* HOVER - se ilumina como en la imagen original */
+.downloadBtn:hover {
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-2px);
 }
 
 /* ===================== */
-/* 📱 RESPONSIVE FIX */
+/* 📱 RESPONSIVE */
 /* ===================== */
 
 @media (max-width: 925px) {
@@ -69,32 +99,46 @@
     font-size: 4rem;
   }
 
-  /* 🔥 clave: columna */
   .header {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    gap: 2rem;
   }
 
   .filesImg {
     width: 50%;
+    max-width: 200px;
+  }
+
+  .downloadBtn {
+    padding: 12px 20px !important;
+    white-space: nowrap;
   }
 }
 
 @media (max-width: 600px) {
-  .header {
-    gap: 1.5rem;
-  }
-
   .title {
     font-size: 3rem;
+    text-align: center;
   }
 
   .filesImg {
-    width: 70%;
+    width: 60%;
+    max-width: 180px;
   }
 
   .downloadBtn {
-    width: 100%;
-    max-width: 260px;
+    padding: 10px 16px !important;
+    font-size: 0.75rem;
+    gap: 8px;
+  }
+
+  .downloadText {
+    font-size: 0.7rem;
+  }
+
+  .filename {
+    font-size: 0.65rem;
+    padding: 2px 6px;
   }
 }
