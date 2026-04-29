@@ -2,10 +2,12 @@
   padding: 12rem 12rem 3rem;
 }
 
+/* 🔥 layout controlado */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 
 .title {
@@ -15,15 +17,18 @@
   font-weight: 200;
 }
 
+/* 🔥 mejor control imagen */
 .filesImg {
   width: 35%;
   min-width: 120px;
+  max-width: 280px;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
 
-  img {
+  svg {
     width: 100%;
     height: auto;
-    display: block;
   }
 
   .hero-svg2 {
@@ -31,41 +36,65 @@
   }
 }
 
-.pdfWrapper {
-  width: 100%;
-  padding: 1rem 0;
+/* 🔥 botón consistente */
+.downloadBtn {
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* textos */
 .downloadText {
   margin-left: 8px;
   text-transform: uppercase;
 }
+
 .filename {
   padding-top: 3px;
   text-transform: uppercase;
   font-size: 12px;
 }
 
-
-@media (max-width: 600px) {
-  .header {
-    padding-bottom: 10px;
-  }
-  .title {
-    font-size: 3rem;
-  }
-
-  .pdfWrapper {
-    width: 100%;
-    padding: 2rem 0;
-  }
-}
+/* ===================== */
+/* 📱 RESPONSIVE FIX */
+/* ===================== */
 
 @media (max-width: 925px) {
   .content {
     padding: 9rem 3rem 1rem;
   }
+
   .title {
     font-size: 4rem;
+  }
+
+  /* 🔥 clave: columna */
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .filesImg {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .filesImg {
+    width: 70%;
+  }
+
+  .downloadBtn {
+    width: 100%;
+    max-width: 260px;
   }
 }
