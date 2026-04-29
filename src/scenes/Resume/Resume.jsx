@@ -20,13 +20,14 @@ const Resume = () => {
             <FilesIcon />
           </div>
 
-          {/* 🔥 BOTÓN ESTILO ORIGINAL - Minimalista blanco con borde */}
+          {/* 🔥 BOTÓN CON ESTILO ORIGINAL - Usando className="primary" como estaba 🔥 */}
           <Button
-            className={s.downloadBtn}
+            style={{ margin: 'auto', width: '15rem' }}
+            className="primary"
             href={resumeLink}
             target="_blank"
           >
-            <DownloadIcon className={s.downloadIcon} />
+            <DownloadIcon fill="#fff" />
             <span className={s.downloadText}>DOWNLOAD RESUME</span>
             <span className={s.filename}>.PDF</span>
           </Button>
