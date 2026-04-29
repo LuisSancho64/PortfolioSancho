@@ -20,13 +20,13 @@ const Resume = () => {
             <FilesIcon />
           </div>
 
-          {/* 🔥 solo quitamos margin auto */}
+          {/* 🔥 SOLO usamos nuestra clase (sin romper estilos internos) */}
           <Button
-            className={`primary ${s.downloadBtn}`}
+            className={`${s.downloadBtn} primary`}
             href={resumeLink}
             target="_blank"
           >
-            <DownloadIcon fill="#fff" />
+            <DownloadIcon />
             <span className={s.downloadText}> download resume</span>
             <span className={s.filename}>.pdf</span>
           </Button>
