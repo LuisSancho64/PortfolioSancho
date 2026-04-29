@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-/* 🔥 esto evita que los elementos se aplasten */
+/* evita que se aplasten */
 .header > * {
   flex-shrink: 0;
 }
@@ -20,7 +20,7 @@
   font-weight: 200;
 }
 
-/* 🔥 CLAVE: controlar el SVG */
+/* imagen */
 .filesImg {
   width: 30%;
   max-width: 260px;
@@ -39,9 +39,40 @@
   }
 }
 
-/* 🔥 botón bien posicionado */
+/* 🔥 BOTÓN (FIX REAL) */
 .downloadBtn {
-  width: 15rem;
+  width: 15rem !important;
+
+  /* FORZAR VISIBILIDAD */
+  background: linear-gradient(135deg, #7b2ff7, #9b4dff) !important;
+  color: #fff !important;
+  border: none !important;
+  opacity: 1 !important;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  font-weight: 600;
+  text-transform: uppercase;
+
+  box-shadow: 0 4px 15px rgba(123, 47, 247, 0.4);
+
+  transition: all 0.3s ease;
+
+  span {
+    color: #fff !important;
+  }
+
+  svg {
+    fill: #fff !important;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+  }
 }
 
 /* textos */
@@ -56,37 +87,8 @@
   font-size: 12px;
 }
 
-.downloadBtn {
-  width: 15rem;
-
-  /* 🔥 recuperar estilo visible */
-  background: linear-gradient(135deg, #7b2ff7, #9b4dff);
-  color: #fff !important;
-  border: none;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-
-  font-weight: 600;
-  text-transform: uppercase;
-
-  transition: all 0.3s ease;
-
-  svg {
-    fill: #fff;
-  }
-
-  &:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.1);
-  }
-}
-
-
 /* ===================== */
-/* 📱 RESPONSIVE (SIN ROMPER) */
+/* 📱 RESPONSIVE */
 /* ===================== */
 
 @media (max-width: 925px) {
@@ -98,7 +100,6 @@
     font-size: 4rem;
   }
 
-  /* 🔥 solo aquí cambiamos a columna */
   .header {
     flex-direction: column;
     align-items: center;
@@ -124,4 +125,3 @@
     width: 70%;
   }
 }
-
