@@ -2,15 +2,12 @@
   padding: 12rem 12rem 3rem;
 }
 
+/* 🔥 layout controlado */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-}
-
-.header > * {
-  flex-shrink: 0;
 }
 
 .title {
@@ -20,11 +17,11 @@
   font-weight: 200;
 }
 
-/* imagen SVG */
+/* 🔥 mejor control imagen */
 .filesImg {
-  width: 30%;
-  max-width: 260px;
-  min-width: 140px;
+  width: 35%;
+  min-width: 120px;
+  max-width: 280px;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -33,54 +30,34 @@
     width: 100%;
     height: auto;
   }
+
+  .hero-svg2 {
+    fill: #8a4ca8;
+  }
 }
 
-/* 🔥🔥🔥 BOTÓN CON ESTILO ORIGINAL (morado con gradiente) */
+/* 🔥 botón consistente */
 .downloadBtn {
   width: 15rem;
-  background: linear-gradient(135deg, #7b2ff7, #9b4dff) !important;
-  color: #ffffff !important;
-  border-radius: 8px;
-  display: inline-flex !important;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none !important;
-  box-shadow: 0 4px 15px rgba(123, 47, 247, 0.4);
-  transition: all 0.25s ease;
-  border: none;
-  cursor: pointer;
 }
 
-/* Asegurar que todos los hijos hereden el color blanco */
-.downloadBtn * {
-  color: #ffffff !important;
-  fill: #ffffff !important;
-}
-
-/* Efecto hover */
-.downloadBtn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.15);
-}
-
-/* Texto principal del botón */
+/* textos */
 .downloadText {
-  margin-left: 6px;
-  letter-spacing: 1px;
+  margin-left: 8px;
+  text-transform: uppercase;
 }
 
-/* Extensión .PDF */
 .filename {
+  padding-top: 3px;
+  text-transform: uppercase;
   font-size: 12px;
-  font-weight: 500;
 }
 
 /* ===================== */
-/* 📱 RESPONSIVE */
+/* 📱 RESPONSIVE FIX */
 /* ===================== */
 
 @media (max-width: 925px) {
@@ -92,30 +69,32 @@
     font-size: 4rem;
   }
 
+  /* 🔥 clave: columna */
   .header {
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .filesImg {
-    width: 50%;
-    max-width: 200px;
-  }
-
-  .downloadBtn {
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .title {
-    font-size: 3rem;
     text-align: center;
   }
 
   .filesImg {
-    width: 60%;
-    max-width: 180px;
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .filesImg {
+    width: 70%;
+  }
+
+  .downloadBtn {
+    width: 100%;
+    max-width: 260px;
   }
 }
