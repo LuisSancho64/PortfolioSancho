@@ -20,15 +20,15 @@ const Resume = () => {
             <FilesIcon />
           </div>
 
-          {/* 🔥 SOLO usamos nuestra clase (sin romper estilos internos) */}
+          {/* 🔥 SOLO ESTA CLASE */}
           <Button
-            className={`${s.downloadBtn} primary`}
+            className={s.downloadBtn}
             href={resumeLink}
             target="_blank"
           >
             <DownloadIcon />
-            <span className={s.downloadText}> download resume</span>
-            <span className={s.filename}>.pdf</span>
+            <span className={s.downloadText}>DOWNLOAD RESUME</span>
+            <span className={s.filename}>.PDF</span>
           </Button>
 
         </div>
