@@ -2,12 +2,15 @@
   padding: 12rem 12rem 3rem;
 }
 
-/* 🔥 layout controlado */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+}
+
+/* 🔥 esto evita que los elementos se aplasten */
+.header > * {
+  flex-shrink: 0;
 }
 
 .title {
@@ -17,11 +20,11 @@
   font-weight: 200;
 }
 
-/* 🔥 mejor control imagen */
+/* 🔥 CLAVE: controlar el SVG */
 .filesImg {
-  width: 35%;
-  min-width: 120px;
-  max-width: 280px;
+  width: 30%;
+  max-width: 260px;
+  min-width: 140px;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -36,12 +39,9 @@
   }
 }
 
-/* 🔥 botón consistente */
+/* 🔥 botón bien posicionado */
 .downloadBtn {
   width: 15rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* textos */
@@ -57,7 +57,7 @@
 }
 
 /* ===================== */
-/* 📱 RESPONSIVE FIX */
+/* 📱 RESPONSIVE (SIN ROMPER) */
 /* ===================== */
 
 @media (max-width: 925px) {
@@ -69,32 +69,29 @@
     font-size: 4rem;
   }
 
-  /* 🔥 clave: columna */
+  /* 🔥 solo aquí cambiamos a columna */
   .header {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    gap: 2rem;
   }
 
   .filesImg {
     width: 50%;
   }
+
+  .downloadBtn {
+    width: 15rem;
+  }
 }
 
 @media (max-width: 600px) {
-  .header {
-    gap: 1.5rem;
-  }
-
   .title {
     font-size: 3rem;
+    text-align: center;
   }
 
   .filesImg {
     width: 70%;
-  }
-
-  .downloadBtn {
-    width: 100%;
-    max-width: 260px;
   }
 }
