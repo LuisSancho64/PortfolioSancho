@@ -20,9 +20,9 @@ const Resume = () => {
             <FilesIcon />
           </div>
 
-          {/* 🔥 quitamos margin auto inline */}
+          {/* 🔥 solo quitamos margin auto */}
           <Button
-            className={`${s.downloadBtn} primary`}
+            className={`primary ${s.downloadBtn}`}
             href={resumeLink}
             target="_blank"
           >
