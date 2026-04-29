@@ -4,8 +4,8 @@ import Button from '../../components/UIElements/Button/Button';
 import BaseLayout from '../../layouts/BaseLayout/BaseLayout';
 import s from './Resume.module.scss';
 
-// URL directa de descarga de Google Drive
-const resumeLink = 'https://drive.google.com/uc?export=download&id=1UQrRzv4B0_OMxjqFt_kFrcjVRvYeUTsP';
+// Usar el enlace de vista previa - funciona siempre
+const resumeLink = 'https://drive.google.com/file/d/1UQrRzv4B0_OMxjqFt_kFrcjVRvYeUTsP/view';
 
 const Resume = () => {
   return (
@@ -19,18 +19,18 @@ const Resume = () => {
           <div className={s.filesImg}>
             <FilesIcon />
           </div>
-        </div>
 
-        <Button
-          style={{ margin: 'auto', width: '15rem' }}
-          className="primary"
-          href={resumeLink}
-          target="_blank"
-        >
-          <DownloadIcon fill="#fff" />
-          <span className={s.downloadText}> download resume</span>
-          <span className={s.filename}>.pdf</span>
-        </Button>
+          <Button
+            style={{ margin: 'auto', width: '15rem' }}
+            className="primary"
+            href={resumeLink}
+            target="_blank"
+          >
+            <DownloadIcon fill="#fff" />
+            <span className={s.downloadText}> download resume</span>
+            <span className={s.filename}>.pdf</span>
+          </Button>
+        </div>
       </div>
     </BaseLayout>
   );
