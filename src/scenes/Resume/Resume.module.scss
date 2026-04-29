@@ -16,78 +16,40 @@
   font-weight: 200;
 }
 
-/* imagen SVG */
 .filesImg {
-  width: 30%;
-  max-width: 260px;
-  min-width: 140px;
+  width: 35%;
+  min-width: 120px;
   padding: 1rem;
-  display: flex;
-  justify-content: center;
 
-  svg {
+  img {
     width: 100%;
     height: auto;
+    display: block;
+  }
+
+  .hero-svg2 {
+    fill: #8a4ca8;
   }
 }
 
-/* 🔥🔥🔥 BOTÓN ESTILO ORIGINAL - Como en la imagen 🔥🔥🔥 */
-.downloadBtn {
-  background: transparent !important;
-  border: 2px solid rgba(255, 255, 255, 0.3) !important;
-  border-radius: 12px !important;
-  color: #ffffff !important;
-  padding: 14px 24px !important;
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 1.5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  backdrop-filter: blur(4px);
-  white-space: nowrap;
+.pdfWrapper {
+  width: 100%;
+  padding: 1rem 0;
 }
 
-/* Icono dentro del botón */
-.downloadIcon {
-  width: 18px;
-  height: 18px;
-  fill: #ffffff !important;
-}
-
-/* Todos los textos blancos */
-.downloadBtn * {
-  color: #ffffff !important;
-}
-
-/* Texto principal */
 .downloadText {
-  font-weight: 600;
+  margin-left: 8px;
+  text-transform: uppercase;
 }
 
-/* Extensión .PDF - estilo destacado como en la imagen */
 .filename {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 4px 8px;
-  border-radius: 8px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-/* HOVER - se ilumina como en la imagen original */
-.downloadBtn:hover {
-  border-color: rgba(255, 255, 255, 0.8) !important;
-  background-color: rgba(255, 255, 255, 0.15) !important;
-  transform: translateY(-2px);
+  padding-top: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 /* ===================== */
-/* 📱 RESPONSIVE */
+/* 📱 RESPONSIVE - SOLO ARREGLO DEL LAYOUT */
 /* ===================== */
 
 @media (max-width: 925px) {
@@ -99,46 +61,37 @@
     font-size: 4rem;
   }
 
+  /* 🔥 ESTO ES LO QUE FALTABA - ARREGLA LA DISTRIBUCIÓN EN MÓVIL */
   .header {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    text-align: center;
+    gap: 1.5rem;
   }
 
   .filesImg {
     width: 50%;
     max-width: 200px;
   }
-
-  .downloadBtn {
-    padding: 12px 20px !important;
-    white-space: nowrap;
-  }
 }
 
 @media (max-width: 600px) {
+  .header {
+    padding-bottom: 10px;
+    gap: 1rem;
+  }
+
   .title {
     font-size: 3rem;
-    text-align: center;
+  }
+
+  .pdfWrapper {
+    width: 100%;
+    padding: 2rem 0;
   }
 
   .filesImg {
     width: 60%;
     max-width: 180px;
-  }
-
-  .downloadBtn {
-    padding: 10px 16px !important;
-    font-size: 0.75rem;
-    gap: 8px;
-  }
-
-  .downloadText {
-    font-size: 0.7rem;
-  }
-
-  .filename {
-    font-size: 0.65rem;
-    padding: 2px 6px;
   }
 }
