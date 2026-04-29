@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 
 .header > * {
@@ -19,7 +20,7 @@
   font-weight: 200;
 }
 
-/* imagen */
+/* imagen SVG */
 .filesImg {
   width: 30%;
   max-width: 260px;
@@ -34,55 +35,48 @@
   }
 }
 
-/* 🔥🔥🔥 FIX DEFINITIVO DEL BOTÓN */
-.downloadBtn,
-.downloadBtn:link,
-.downloadBtn:visited {
+/* 🔥🔥🔥 BOTÓN CON ESTILO ORIGINAL (morado con gradiente) */
+.downloadBtn {
   width: 15rem;
-
-  background: linear-gradient(135deg, #7b2ff7, #9b4dff);
+  background: linear-gradient(135deg, #7b2ff7, #9b4dff) !important;
   color: #ffffff !important;
   border-radius: 8px;
-
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
   gap: 8px;
-
   padding: 12px 16px;
-
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none !important;
-
   box-shadow: 0 4px 15px rgba(123, 47, 247, 0.4);
-
   transition: all 0.25s ease;
-
-  /* 🔥 esto mata cualquier estilo interno del Button */
-  background-color: transparent; /* reset */
-  background: linear-gradient(135deg, #7b2ff7, #9b4dff) !important;
+  border: none;
+  cursor: pointer;
 }
 
-/* 🔥 hijos SIEMPRE visibles */
+/* Asegurar que todos los hijos hereden el color blanco */
 .downloadBtn * {
-  color: #fff !important;
-  fill: #fff !important;
+  color: #ffffff !important;
+  fill: #ffffff !important;
 }
 
-/* hover */
+/* Efecto hover */
 .downloadBtn:hover {
   transform: translateY(-2px);
   filter: brightness(1.15);
 }
 
-/* textos */
+/* Texto principal del botón */
 .downloadText {
   margin-left: 6px;
+  letter-spacing: 1px;
 }
 
+/* Extensión .PDF */
 .filename {
   font-size: 12px;
+  font-weight: 500;
 }
 
 /* ===================== */
@@ -106,6 +100,11 @@
 
   .filesImg {
     width: 50%;
+    max-width: 200px;
+  }
+
+  .downloadBtn {
+    margin-top: 1rem;
   }
 }
 
@@ -116,6 +115,7 @@
   }
 
   .filesImg {
-    width: 70%;
+    width: 60%;
+    max-width: 180px;
   }
 }
