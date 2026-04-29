@@ -56,6 +56,35 @@
   font-size: 12px;
 }
 
+.downloadBtn {
+  width: 15rem;
+
+  /* 🔥 recuperar estilo visible */
+  background: linear-gradient(135deg, #7b2ff7, #9b4dff);
+  color: #fff !important;
+  border: none;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  font-weight: 600;
+  text-transform: uppercase;
+
+  transition: all 0.3s ease;
+
+  svg {
+    fill: #fff;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+  }
+}
+
+
 /* ===================== */
 /* 📱 RESPONSIVE (SIN ROMPER) */
 /* ===================== */
@@ -95,3 +124,4 @@
     width: 70%;
   }
 }
+
