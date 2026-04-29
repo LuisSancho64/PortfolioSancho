@@ -5,7 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout/BaseLayout';
 import s from './Resume.module.scss';
 
 // URL directa de descarga de Google Drive
-const resumeLink = 'https://drive.google.com/uc?export=download&id=1dqBsVg-IdMYcuWtjlyYQTtS7u-_1FD2f';
+const resumeLink = 'https://drive.google.com/uc?export=download&confirm=t&id=1UQrRzv4B0_OMxjqFt_kFrcjVRvYeUTsP';
 
 const Resume = () => {
   return (
