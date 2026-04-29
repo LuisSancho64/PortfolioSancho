@@ -5,18 +5,9 @@ import BaseLayout from '../../layouts/BaseLayout/BaseLayout';
 import s from './Resume.module.scss';
 
 // URL directa de descarga de Google Drive
-const resumeLink = 'https://drive.google.com/uc?export=download&confirm=t&id=1UQrRzv4B0_OMxjqFt_kFrcjVRvYeUTsP';
+const resumeLink = 'https://drive.google.com/file/d/1UQrRzv4B0_OMxjqFt_kFrcjVRvYeUTsP/view';
 
 const Resume = () => {
-  const handleDownload = (e) => {
-    try {
-      window.open(resumeLink, '_blank');
-    } catch (error) {
-      console.error('Error al abrir el enlace:', error);
-      alert('No se pudo abrir el curriculum. Copia este enlace en tu navegador:\n' + resumeLink);
-    }
-  };
-
   return (
     <BaseLayout>
       <div className={s.content}>
@@ -33,7 +24,8 @@ const Resume = () => {
         <Button
           style={{ margin: 'auto', width: '15rem' }}
           className="primary"
-          onClick={handleDownload}
+          href={resumeLink}
+          target="_blank"
         >
           <DownloadIcon fill="#fff" />
           <span className={s.downloadText}> download resume</span>
