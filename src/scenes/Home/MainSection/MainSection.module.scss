@@ -17,11 +17,13 @@
   padding-left: .2rem;
   font-size: 2.4rem;
 }
+
 .greetingContainer {
   display: flex;
   align-items: center;
   padding-bottom: 15px;
 }
+
 .handIcon {
   width: 48px;
   margin-top: -16px;
@@ -32,54 +34,68 @@
   font-size: 2.5rem;
   word-spacing: .3rem;
 }
+
 .mainName {
   color: var(--txt-sec-darcker);
   text-transform: uppercase;
 }
 
 .spacer {
-  width: 4rem
+  width: 4rem;
 }
 
+/* 🔥 IMPORTANTE: mejor control del avatar */
 .homeMainIcon {
   display: flex !important;
   width: 37%;
   min-height: 25rem;
   margin-top: 2rem;
   padding: 0 15px;
+  justify-content: center;
 
   & > img {
-    min-width: 230px;
+    width: 100%;
+    max-width: 396px;
     height: auto;
   }
 }
 
-.typewriter div {
-  padding-top: 50px;
+/* 🔥 FIX PRINCIPAL */
+.typewriter {
+  margin-top: 30px;
   margin-bottom: 24px;
-  height: 85px
+  min-height: 60px; /* evita saltos */
 }
+
 .typewriterInner {
   font-size: 2.2em;
   color: var(--txt-secondary);
   font-weight: 600;
+  line-height: 1.2;
 }
+
 .typewriterCursor {
   font-size: 2.4em;
   color: var(--txt-secondary);
 }
 
+/* ===================== */
+/* 📱 RESPONSIVE FIX */
+/* ===================== */
 
 @media (max-width: 925px) {
   .content {
     padding: 9rem 3rem 1rem;
     flex-wrap: wrap;
-    align-self: stretch;
+    flex-direction: column; /* 🔥 clave */
+    text-align: center;
   }
+
   .homeMainIcon {
-    justify-content: center;
-    width: 60%;
+    width: 70%;
+    margin-top: 3rem;
   }
+
   .spacer {
     display: none;
   }
@@ -88,11 +104,20 @@
 @media (max-width: 625px) {
   .header {
     align-self: center;
-    text-align: center
+    text-align: center;
   }
+
   .greetingContainer {
     justify-content: center;
-    padding-left: 24px;
+    padding-left: 0;
     padding-bottom: 20px;
+  }
+
+  .typewriterInner {
+    font-size: 1.8em; /* 🔥 baja tamaño en móvil */
+  }
+
+  .homeMainIcon {
+    width: 85%;
   }
 }
