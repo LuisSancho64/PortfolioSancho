@@ -7,6 +7,7 @@ import s from './MainSection.module.scss';
 const MainSection = () => {
   return (
     <section className={s.content}>
+      
       <div className={s.header}>
         <div className={s.greetingContainer}>
           <h2 className={s.title}>
@@ -15,6 +16,7 @@ const MainSection = () => {
           <img 
              src={handIcon}
              className={s.handIcon}
+             alt="hand"
            />
         </div>
 
@@ -23,26 +25,16 @@ const MainSection = () => {
           <strong className={s.mainName}> LUIS SANCHO</strong>
         </h1>
 
-        <div className={s.typewriter} style={{ 
-          minHeight: '60px', 
-          position: 'relative',
-          width: '100%'
-        }}>
-          <div style={{
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            width: '100%'
-          }}>
-            <Typewriter
-              strings={[
-                'Continuously Learning',
-                'Full Stack Developer',
-              ]}
-              wrapperClassName={s.typewriterInner}
-              cursorClassName={s.typewriterCursor}
-            />
-          </div>
+        {/* 🔥 FIX: quitamos absolute y dejamos flujo natural */}
+        <div className={s.typewriter}>
+          <Typewriter
+            strings={[
+              'Continuously Learning',
+              'Full Stack Developer',
+            ]}
+            wrapperClassName={s.typewriterInner}
+            cursorClassName={s.typewriterCursor}
+          />
         </div>
       </div>
 
@@ -53,8 +45,6 @@ const MainSection = () => {
         effect="blur"
         src={homeMainIcon}
         wrapperClassName={s.homeMainIcon}
-        width="396"
-        height="400"
       />
     </section>
   );
