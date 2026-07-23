@@ -5,7 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout/BaseLayout';
 import s from './Resume.module.scss';
 
 // Usar el enlace de vista previa - funciona siempre
-const resumeLink = 'https://drive.google.com/file/d/1UQrRzv4B0_OMxjqFt_kFrcjVRvYeUTsP/view';
+const resumeLink = 'https://drive.google.com/file/d/1YE8nwEwkHvyrjgsPo4CJCxVq9dDRLXxp/view';
 
 const Resume = () => {
   return (
